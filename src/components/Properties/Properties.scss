@@ -1,0 +1,29 @@
+@use "../../index.scss" as *;
+
+.properties{
+    margin-top: 60px;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 30px;
+
+    @media screen and (max-width: 770px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.noProperties{
+    width: 100%;
+    font-family: $font-family;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-main;
+    margin-top: 60px;
+    text-align: center;
+}

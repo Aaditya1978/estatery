@@ -1,0 +1,108 @@
+@use "../../index.scss" as *;
+
+.filters {
+    margin-top: 60px;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 20px 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .filter {
+        width: 20%;
+        padding: 5px 30px;
+        border-right: 1px solid #e0e0e0;
+
+        label {
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 700;
+            color: #4f4f4f;
+        }
+
+        input {
+            border: none;
+
+            &:focus {
+                outline: none !important;
+                box-shadow: none;
+            }
+
+            &::placeholder {
+                font-family: $font-family;
+                font-size: 16px;
+                font-weight: 500;
+                color: #000;
+            }
+        }
+
+        select{
+            border: none;
+            background-color: transparent;
+            font-family: $font-family;
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            cursor: pointer;
+
+            &:focus {
+                outline: none !important;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            border: none;
+            background-color: $color-main;
+            cursor: pointer;
+            width: 150px;
+            padding: 10px 30px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                background-color: darken($color-main, 10%);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .filter {
+            width: 22%;
+        }
+
+        .search{
+            button{
+                width: 100px;
+                padding: 5px 10px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .filter {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 5px 0;
+            margin-bottom: 10px;
+        }
+
+        .search{
+            margin-top: 20px;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+@use "../../index.scss" as *;
+
+.nav {
+    background-color: #ffffff;
+    border-bottom: 0.01rem solid #8f8e8e;
+    height: 80px;
+    
+    .container{
+        background-color: #ffffff;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+            width: 40px;
+        }
+
+        h1 {
+            font-family: $font-family;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: $color-main;
+        }
+    }
+
+    .nav-links {
+        margin-left: 40px;
+        gap: 30px;
+
+        .nav-link {
+            font-family: $font-family;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            transition: 0.3s ease-in-out;
+            border-radius: 8px;
+            padding: 10px 15px;
+            color: #000;
+
+            &:hover {
+                color: $color-main;
+                background-color: rgba(110, 101, 242, 0.2);
+            }
+        }
+
+        .active {
+            color: $color-main;
+            background-color: rgba(110, 101, 242, 0.2);
+        }
+    }
+
+    .nav-btns {
+        gap: 20px;
+
+        .nav-btn {
+            border-radius: 8px;
+            width: 120px;
+            padding: 10px 20px;
+            font-family: $font-family;
+            font-weight: 600;
+        }
+
+        .btn-1 {
+            background-color: #ffffff;
+            color: $color-main;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn-1:hover {
+            background-color: $color-main;
+            color: #ffffff;
+        }
+
+        .btn-2 {
+            background-color: $color-main;
+            color: #ffffff;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn-2:hover {
+            background-color: #ffffff;
+            color: $color-main;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .nav-links {
+            gap: 20px;
+
+            .nav-link {
+                font-size: 14px;
+            }
+        }
+
+        .nav-btns {
+            gap: 15px;
+
+            .nav-btn {
+                width: 100px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .nav-links {
+            margin-left: 0px;
+            margin-top: 20px;
+
+            .nav-link {
+                background-color: #ffffff;
+            }
+        }
+
+        .nav-btns {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
